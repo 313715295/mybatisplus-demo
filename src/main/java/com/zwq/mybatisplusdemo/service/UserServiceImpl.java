@@ -13,6 +13,6 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl extends ServiceImpl<UserMapper,UserPO> implements UserService {
     @Override
     public UserPO get() {
-        return baseMapper.selectById(2);
+        return baseMapper.selectById(1);
     }
 }

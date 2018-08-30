@@ -33,7 +33,7 @@ import java.util.Map;
 //@MapperScan("com.admin.dao.sysMapper")
 public class UserDruidConfig {
     // 精确到 cluster 目录，以便跟其他数据源隔离
-    static final String POJO_PACKAGE = "com.zwq.mybatisplusdemo.pojo";
+    private static final String POJO_PACKAGE = "com.zwq.mybatisplusdemo.pojo";
     static final String MAPPER_PACKAGE = "com.zwq.mybatisplusdemo.dao.user";
     static final String MAPPER_LOCATION = "classpath*:/mapper/user/*.xml";
     @Value("${spring.datasource.sys.url}")
@@ -99,7 +99,7 @@ public class UserDruidConfig {
         MybatisSqlSessionFactoryBean mybatisPlus = new MybatisSqlSessionFactoryBean();
         mybatisPlus.setDataSource(sysDataSource);
         mybatisPlus.setVfs(SpringBootVFS.class);
-//        mybatisPlus.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(UserDruidConfig.MAPPER_LOCATION));
+        mybatisPlus.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(UserDruidConfig.MAPPER_LOCATION));
         mybatisPlus.setTypeAliasesPackage(UserDruidConfig.POJO_PACKAGE);
         mybatisPlus.setGlobalConfig(globalConfiguration);
         MybatisConfiguration configuration = new MybatisConfiguration();

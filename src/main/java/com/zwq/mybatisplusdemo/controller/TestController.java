@@ -7,6 +7,7 @@ import com.zwq.mybatisplusdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Map;
 /**
  * created by zwq on 2018/8/29
  */
-@Controller
+@RestController
 public class TestController {
     private UserService userService;
     private CityService cityService;

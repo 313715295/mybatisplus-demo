@@ -36,9 +36,9 @@ import java.util.Map;
 //@MapperScan("com.admin.dao.manageMapper")
 public class CityDruidConfig {
     // 精确到 cluster 目录，以便跟其他数据源隔离
-    static final String POJO_PACKAGE = "com.zwq.mybatisplusdemo.pojo";
-    static final String MAPPER_PACKAGE = "com.zwq.mybatisplusdemo.dao.user";
-    static final String MAPPER_LOCATION = "classpath*:/mapper/city/*.xml";
+    private static final String POJO_PACKAGE = "com.zwq.mybatisplusdemo.pojo";
+    static final String MAPPER_PACKAGE = "com.zwq.mybatisplusdemo.dao.city";
+    private static final String MAPPER_LOCATION = "classpath*:/mapper/city/*.xml";
     @Value("${spring.datasource.manage.url}")
     private String url;
     @Value("${spring.datasource.manage.username}")
