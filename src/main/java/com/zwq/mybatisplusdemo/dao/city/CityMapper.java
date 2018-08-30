@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * created by zwq on 2018/8/29
  */
-public interface CityMapper {
+public interface CityMapper  {
     CityPO selectById(int id);
 }
